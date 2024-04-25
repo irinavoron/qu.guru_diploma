@@ -1,0 +1,17 @@
+[tool.poetry]
+package-mode = false
+name = "qu-guru-diploma"
+version = "0.1.0"
+description = ""
+authors = ["Irina.Voron <yarutich.irina@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+selene = "2.0.0rc9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
