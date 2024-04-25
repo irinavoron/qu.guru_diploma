@@ -1,0 +1,1 @@
+# qu.guru_diploma
