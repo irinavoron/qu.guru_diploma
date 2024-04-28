@@ -30,7 +30,8 @@ def browser_management():
         options=options)
     browser.config.driver = driver
 
-    browser.config.base_url = 'https://www.saucedemo.com'
+    base_url = os.getenv('BASE_URL')
+    browser.config.base_url = base_url
     browser.config.window_width = 1896
     browser.config.window_height = 1096
 
