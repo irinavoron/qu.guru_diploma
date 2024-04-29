@@ -1,7 +1,6 @@
 import os
-
 import allure
-from selene import browser, by
+from selene import browser
 
 from saucedemo_test.data.products import backpack, Product
 from dotenv import load_dotenv
@@ -27,6 +26,20 @@ def add_to_cart(product: Product):
         browser.element(f'{product.add_id}').click()
 
 
-def remove_from_cart(product: Product):
+def remove_product_from_cart(product: Product):
     with allure.step('Remove product from the cart'):
         browser.element(f'{product.remove_id}').click()
+
+
+def clear_cart(products_qty):
+    with allure.step('Clear cart'):
+        browser.open('/cart.html')
+        for product in range(products_qty):
+            browser.element('[name^=remove]').click()
+
+
+def open_cart_from_catalogue():
+    with allure.step('Open cart by clicking cart item'):
+        browser.element('.shopping_cart_link').click()
+
+
