@@ -25,7 +25,7 @@ def test_unsuccessful_login():
         browser.element('#login-button').click()
 
     with allure.step('Verify that error message is displayed'):
-        browser.element('.error-button').shoul(be.visible)
+        browser.element('.error-button').should(be.visible)
 
 
 def test_cart_badge_displays_items_number():
