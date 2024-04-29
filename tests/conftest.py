@@ -9,26 +9,26 @@ from dotenv import load_dotenv
 
 @pytest.fixture(autouse=True, scope='function')
 def browser_management():
-    options = Options()
-
-    selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": "120.0",
-        "selenoid:options": {
-            "enableVideo": True,
-            "enableVNC": True
-        }
-    }
-
-    load_dotenv()
-    url = os.getenv('SELENOID_URL')
-    login = os.getenv('SELENOID_LOGIN')
-    password = os.getenv('SELENOID_PASSWORD')
-    options.capabilities.update(selenoid_capabilities)
-    driver = webdriver.Remote(
-        command_executor=f'https://{login}:{password}@{url}/wd/hub',
-        options=options)
-    browser.config.driver = driver
+    # options = Options()
+    #
+    # selenoid_capabilities = {
+    #     "browserName": "chrome",
+    #     "browserVersion": "120.0",
+    #     "selenoid:options": {
+    #         "enableVideo": True,
+    #         "enableVNC": True
+    #     }
+    # }
+    #
+    # load_dotenv()
+    # url = os.getenv('SELENOID_URL')
+    # login = os.getenv('SELENOID_LOGIN')
+    # password = os.getenv('SELENOID_PASSWORD')
+    # options.capabilities.update(selenoid_capabilities)
+    # driver = webdriver.Remote(
+    #     command_executor=f'https://{login}:{password}@{url}/wd/hub',
+    #     options=options)
+    # browser.config.driver = driver
 
     base_url = os.getenv('BASE_URL')
     browser.config.base_url = base_url
