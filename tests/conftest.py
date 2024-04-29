@@ -6,6 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
 
+from saucedemo_test.utils import attach
+
 
 @pytest.fixture(autouse=True, scope='function')
 def browser_management():
@@ -36,6 +38,11 @@ def browser_management():
     browser.config.window_height = 1096
 
     yield
+
+    attach.add_screenshot()
+    attach.add_logs()
+    attach.add_html()
+    attach.add_video()
 
     browser.quit()
 

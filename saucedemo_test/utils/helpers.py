@@ -6,7 +6,7 @@ from saucedemo_test.data.products import backpack, Product
 from dotenv import load_dotenv
 
 load_dotenv()
-standard_user_name = os.getenv('STANDARD_USER_NAME')
+user_name = os.getenv('USER_NAME')
 user_password = os.getenv('USER_PASSWORD')
 
 
@@ -15,7 +15,7 @@ def successful_login():
         browser.open('/')
 
     with allure.step('Fill the login form'):
-        browser.element('#user-name').type(standard_user_name)
+        browser.element('#user-name').type(user_name)
         browser.element('#password').type(user_password)
     with allure.step('Submit the login form'):
         browser.element('#login-button').click()

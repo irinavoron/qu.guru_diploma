@@ -13,6 +13,21 @@ def test_successful_login():
         browser.element('.inventory_list').should(be.visible)
 
 
+#TBD parametrize
+def test_unsuccessful_login():
+    with allure.step('Open main page'):
+        browser.open('/')
+
+    with allure.step('Fill the login form'):
+        browser.element('#user-name').type('user_name')
+        browser.element('#password').type('user_password')
+    with allure.step('Submit the login form'):
+        browser.element('#login-button').click()
+
+    with allure.step('Verify that error message is displayed'):
+        browser.element('.error-button').shoul(be.visible)
+
+
 def test_cart_badge_displays_items_number():
     successful_login()
     add_to_cart(products.backpack)
