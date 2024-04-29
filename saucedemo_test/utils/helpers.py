@@ -10,7 +10,7 @@ standard_user_name = os.getenv('STANDARD_USER_NAME')
 user_password = os.getenv('USER_PASSWORD')
 
 
-def standard_user_login():
+def successful_login():
     with allure.step('Open main page'):
         browser.open('/')
 
