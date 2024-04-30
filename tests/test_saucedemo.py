@@ -1,5 +1,9 @@
+import os
+
 import allure
 from selene import browser, be, have
+import pytest
+from dotenv import load_dotenv
 
 from saucedemo_test.data import products
 from saucedemo_test.pages import login_page, common
@@ -10,6 +14,10 @@ from saucedemo_test.pages.cart_page import Cart
 inventory_page = InventoryPage()
 cart = Cart()
 
+load_dotenv()
+user_name = os.getenv('USER_NAME')
+user_password = os.getenv('USER_PASSWORD')
+
 
 def test_successful_login():
     login_page.successful_login()
@@ -18,9 +26,17 @@ def test_successful_login():
         browser.element('.inventory_list').should(be.visible)
 
 
-# TBD parametrize
-def test_unsuccessful_login():
-    login_page.unsuccessful_login()
+@pytest.mark.parametrize(
+    'login, password', [
+        ('wrong_name', {user_password}),
+        ({user_name}, 'wrong_password'),
+        ('', ''),
+        ('locked_out_user', {user_password})
+    ],
+    ids=['invalid name', 'invalid password', 'empty form', 'locked out user']
+)
+def test_unsuccessful_login(login, password):
+    login_page.unsuccessful_login(login, password)
 
     with allure.step('Verify that error message is displayed'):
         browser.element('.error-button').should(be.visible)

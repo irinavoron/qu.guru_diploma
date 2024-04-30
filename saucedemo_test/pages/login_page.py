@@ -1,5 +1,5 @@
 import os
-
+import pytest
 import allure
 from selene import browser
 from dotenv import load_dotenv
@@ -39,9 +39,10 @@ def successful_login():
     login_page.submit_login_form()
 
 
-def unsuccessful_login():
+
+def unsuccessful_login(login, password):
     login_page.open_login_page()
 
-    login_page.fill_user_name('user_name')
-    login_page.fill_password('user_password')
+    login_page.fill_user_name(login)
+    login_page.fill_password(password)
     login_page.submit_login_form()
