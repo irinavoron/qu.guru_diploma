@@ -4,7 +4,6 @@ import allure
 from selene import browser
 from dotenv import load_dotenv
 
-
 load_dotenv()
 user_name = os.getenv('USER_NAME')
 user_password = os.getenv('USER_PASSWORD')
@@ -29,10 +28,20 @@ class LoginPage:
             browser.element('#login-button').click()
 
 
+login_page = LoginPage()
+
+
 def successful_login():
-    login_page = LoginPage()
     login_page.open_login_page()
 
     login_page.fill_user_name(user_name)
     login_page.fill_password(user_password)
+    login_page.submit_login_form()
+
+
+def unsuccessful_login():
+    login_page.open_login_page()
+
+    login_page.fill_user_name('user_name')
+    login_page.fill_password('user_password')
     login_page.submit_login_form()

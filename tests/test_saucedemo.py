@@ -20,14 +20,7 @@ def test_successful_login():
 
 # TBD parametrize
 def test_unsuccessful_login():
-    with allure.step('Open main page'):
-        browser.open('/')
-
-    with allure.step('Fill the login form'):
-        browser.element('#user-name').type('user_name')
-        browser.element('#password').type('user_password')
-    with allure.step('Submit the login form'):
-        browser.element('#login-button').click()
+    login_page.unsuccessful_login()
 
     with allure.step('Verify that error message is displayed'):
         browser.element('.error-button').should(be.visible)
