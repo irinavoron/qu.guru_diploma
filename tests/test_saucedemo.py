@@ -1,6 +1,7 @@
 import os
 
 import allure
+from allure_commons.types import Severity
 from selene import browser, be, have
 import pytest
 from dotenv import load_dotenv
@@ -19,6 +20,12 @@ user_name = os.getenv('USER_NAME')
 user_password = os.getenv('USER_PASSWORD')
 
 
+@allure.title('Successful login')
+@allure.tag('web', 'smoke')
+@allure.story('User can login with valid creds')
+@allure.feature('Login')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.BLOCKER)
 def test_successful_login():
     login_page.successful_login()
 
@@ -26,6 +33,12 @@ def test_successful_login():
         browser.element('.inventory_list').should(be.visible)
 
 
+@allure.title('Unsuccessful login')
+@allure.tag('web')
+@allure.story('User can`t login with invalid creds')
+@allure.feature('Login')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.CRITICAL)
 @pytest.mark.parametrize(
     'login, password', [
         ('wrong_name', {user_password}),
@@ -42,6 +55,12 @@ def test_unsuccessful_login(login, password):
         browser.element('.error-button').should(be.visible)
 
 
+@allure.title('Cart badge displays items number')
+@allure.tag('web')
+@allure.story('The number of items in cart is displayed om the cart icon')
+@allure.feature('Inventory page')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.MINOR)
 def test_cart_badge_displays_items_number():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
@@ -57,6 +76,12 @@ def test_cart_badge_displays_items_number():
     cart.clear_cart(2)
 
 
+@allure.title('Product can be added to cart')
+@allure.tag('web', 'smoke')
+@allure.story('The added product is displayed in the cart')
+@allure.feature('Inventory page')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.BLOCKER)
 def test_product_is_added_to_cart():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
@@ -67,6 +92,12 @@ def test_product_is_added_to_cart():
     cart.clear_cart(1)
 
 
+@allure.title('The product page is opened after clicking the product')
+@allure.tag('web')
+@allure.story('The number of items in cart is displayed om the cart icon')
+@allure.feature('Inventory page')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.NORMAL)
 def test_product_page_can_be_opened_from_inventory_page():
     login_page.successful_login()
 
@@ -75,6 +106,12 @@ def test_product_page_can_be_opened_from_inventory_page():
     product_details_match_selected_product(products.bike_light)
 
 
+@allure.title('The added product can be removed from the cart')
+@allure.tag('web')
+@allure.story('The cart is empty after deleting the added product from it')
+@allure.feature('Cart')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.NORMAL)
 def test_product_can_be_removed_from_cart():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
@@ -87,6 +124,12 @@ def test_product_can_be_removed_from_cart():
         items_list.should(have.size(0))
 
 
+@allure.title('The added product can be removed from the cart')
+@allure.tag('web')
+@allure.story('The cart is empty after deleting the added product from it')
+@allure.feature('Cart')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.NORMAL)
 def test_user_can_proceed_to_checkout():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
@@ -101,6 +144,12 @@ def test_user_can_proceed_to_checkout():
     cart.clear_cart(1)
 
 
+@allure.title('The user can continue shopping from the cart')
+@allure.tag('web')
+@allure.story('The user gets redirected to the inventory page after clicking "Continiue shopping"')
+@allure.feature('Cart')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.NORMAL)
 def test_user_can_continue_shopping_from_cart():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
@@ -115,6 +164,12 @@ def test_user_can_continue_shopping_from_cart():
     cart.clear_cart(1)
 
 
+@allure.title('The cart stays persistent when switching between pages')
+@allure.tag('web')
+@allure.story('The added product stays in cart after switching to another page and back')
+@allure.feature('Cart')
+@allure.label('owner', 'irinaV')
+@allure.severity(Severity.CRITICAL)
 def test_cart_persistence():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
