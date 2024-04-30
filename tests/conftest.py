@@ -32,6 +32,7 @@ def browser_management():
         options=options)
     browser.config.driver = driver
 
+    load_dotenv()
     base_url = os.getenv('BASE_URL')
     browser.config.base_url = base_url
     browser.config.window_width = 1896
