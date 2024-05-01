@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
 
-from saucedemo_test.utils import attach
+from saucedemo_diploma_project_test.utils import attach
 
 
 @pytest.fixture(autouse=True, scope='function')

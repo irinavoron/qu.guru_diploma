@@ -2,8 +2,8 @@ import allure
 from allure_commons.types import Severity
 from selene import browser, have, be
 
-from saucedemo_test.data import products
-from saucedemo_test.pages import login_page, common
+from saucedemo_diploma_project_test.data import products
+from saucedemo_diploma_project_test.pages import login_page, common
 from tests.test_inventory_page import inventory_page, cart
 
 
