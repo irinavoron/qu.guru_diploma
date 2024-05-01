@@ -4,11 +4,11 @@ from selene import browser
 from saucedemo_test.data.products import Product
 
 
+@allure.feature('Cart')
 class Cart:
     def remove_product(self, product: Product):
         with allure.step('Remove product from the cart'):
             browser.element(f'{product.remove_id}').click()
-
 
     def clear_cart(self, products_qty):
         with allure.step('Clear cart'):
