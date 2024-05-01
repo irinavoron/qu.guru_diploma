@@ -4,7 +4,6 @@ from selene import browser
 from saucedemo_diploma_project_test.data.products import Product
 
 
-@allure.feature('Cart')
 class Cart:
     def remove_product(self, product: Product):
         with allure.step('Remove product from the cart'):
