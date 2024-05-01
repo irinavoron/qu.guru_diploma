@@ -25,9 +25,9 @@ def test_product_can_be_removed_from_cart():
         items_list.should(have.size(0))
 
 
-@allure.title('The added product can be removed from the cart')
+@allure.title('The user can proceed to checkout from the cart')
 @allure.tag('web')
-@allure.story('The cart is empty after deleting the added product from it')
+@allure.story('TThe user gets redirected to the checkout page after clicking "Checkout"')
 @allure.feature('Cart')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.NORMAL)
@@ -47,7 +47,7 @@ def test_user_can_proceed_to_checkout_from_cart():
 
 @allure.title('The user can continue shopping from the cart')
 @allure.tag('web')
-@allure.story('The user gets redirected to the inventory page after clicking "Continiue shopping"')
+@allure.story('The user gets redirected to the inventory page after clicking "Continue shopping"')
 @allure.feature('Cart')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.NORMAL)
