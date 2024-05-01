@@ -4,7 +4,7 @@ from allure_commons.types import Severity
 from selene import browser, be
 
 from saucedemo_test.pages import login_page
-from tests.test_saucedemo import user_password, user_name
+from tests.test_inventory_page import user_password, user_name
 
 
 @allure.title('Successful login')
