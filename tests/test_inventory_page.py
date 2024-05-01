@@ -21,7 +21,7 @@ user_password = os.getenv('USER_PASSWORD')
 
 @allure.title('Cart badge displays items number')
 @allure.tag('web')
-@allure.story('The number of items in cart is displayed om the cart icon')
+@allure.story('The user can see the number of the added products on the cart icon')
 @allure.feature('Inventory page')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.MINOR)
@@ -42,7 +42,7 @@ def test_cart_badge_displays_items_number():
 
 @allure.title('Product can be added to cart')
 @allure.tag('web', 'smoke')
-@allure.story('The added product is displayed in the cart')
+@allure.story('The user can see the added product in the cart')
 @allure.feature('Inventory page')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.BLOCKER)
@@ -58,7 +58,7 @@ def test_product_is_added_to_cart():
 
 @allure.title('The product page is opened after clicking the product')
 @allure.tag('web')
-@allure.story('The number of items in cart is displayed om the cart icon')
+@allure.story('The user can open product page from the inventory page')
 @allure.feature('Inventory page')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.NORMAL)

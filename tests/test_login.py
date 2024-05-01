@@ -9,7 +9,7 @@ from tests.test_inventory_page import user_password, user_name
 
 @allure.title('Successful login')
 @allure.tag('web', 'smoke')
-@allure.story('User can login with valid creds')
+@allure.story('The user can login with valid creds')
 @allure.feature('Login')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.BLOCKER)
@@ -22,7 +22,7 @@ def test_successful_login():
 
 @allure.title('Unsuccessful login')
 @allure.tag('web')
-@allure.story('User can`t login with invalid creds')
+@allure.story('The user can`t login with invalid creds')
 @allure.feature('Login')
 @allure.label('owner', 'irinaV')
 @allure.severity(Severity.CRITICAL)
