@@ -10,5 +10,5 @@ class InventoryPage:
 
 
     def open_cart(self):
-        with allure.step('Open cart by clicking cart item'):
+        with allure.step('Open cart by clicking cart icon'):
             browser.element('.shopping_cart_link').click()

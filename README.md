@@ -1,4 +1,5 @@
-# <p align="center"> UI tests automation project www.saucedemo.com in <code>Python</code> using <code>Pytest</code> </p>
+# <p align="center"> UI tests automation project www.saucedemo.com </p>
+### <p align="center"> in <code>Python</code> using <code>Pytest</code> </p>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/jw.PNG">
 </p>
@@ -9,17 +10,15 @@
 >
 > ➠ [Covered Functionality](#earth_africa-покрытый-функционал)
 >
-> ➠ [Сборка в Jenkins](#earth_africa-Jenkins-job)
+> ➠ [Build in Jenkins](#earth_africa-Jenkins-job)
 >
-> ➠ [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
+> ➠ [Running tests locally](#earth_africa-Запуск-тестов-из-терминала)
 >
-> ➠ [Примеры использования](#earth_africa-Allure-отчет)
->
-> ➠ [Allure отчет](#earth_africa-Allure-отчет)
+> ➠ [Allure Report](#earth_africa-Allure-отчет)
 > 
-> ➠ [Интеграция с Jira](#earth_africa-Allure-отчет)
+> ➠ [Integration with Jira](#earth_africa-Allure-отчет)
 >
-> ➠ [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
+> ➠ [Report in Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
 >
 > ➠ [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
@@ -29,7 +28,7 @@
 <p align="center">
 <a href="https://www.jetbrains.com/pycharm/"><img src="images/logo/pycharm.svg" width="50" height="50"  alt="PyCharm"/></a>
 <a href="https://www.python.com/"><img src="images/logo/python.svg" width="50" height="50"  alt="Python"/></a>
-<a href="https://github.com/"><img src="images/logo/github.svg" width="50" height="50"  alt="GitHub"/></a>
+<a href="https://github.com/"><img src="images/logo/github-2.svg" width="50" height="50"  alt="GitHub"/></a>
 <a href="https://docs.pytest.org/"><img src="images/logo/pytest.svg" width="50" height="50"  alt="Pytest 5"/></a>
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/logo/allure.svg" width="50" height="50"  alt="Allure"/></a>
@@ -59,83 +58,53 @@
 - [x] User can open the product description from the inventory page
 - [x] Items number in the cart is displayed on the cart icon
 
-## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> project link </a>
+## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> Jenkins </a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.PNG" alt="Jenkins"/></a>
 </p>
 
-### Удаленный запуск тестов на Jenkins
+### Running tests remotely on Jenkins
 
 ```
-clean
-test
--Duser=${USER}
--Dpassword=${PASSWORD}
--DremoteBrowser=${REMOTE_DRIVER_URL}
--Dbrowser=${BROWSER}
--Dsize=${BROUSERSIZE}
--Dversion=${VERSION}
+python -m venv .venv
+source .venv/bin/activate
+pip install poetry 
+poetry install
+pytest "${TEST}"
 ```
-##  Запуск тестов из терминала
-Локальный запуск:
+##  Running tests locally
+
 ```
-gradle clean test
+pytest .
 ```
 
-# Примеры использования
+## <img src="images/logo/allure.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/41/allure/">Allure Report</a>
 
-### Для запуска удаленных тестов необходимо заполнить remote.properties или передать значение:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
-
-
-Запускайте тесты с заполненным remote.properties:
-```bash
-gradle clean test
-```
-
-Запускайте тесты с незаполненным remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
-Сгенерировать отчет:
-```bash
-allure serve build/allure-results
-```
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/Johnnie_Walker_UI_tests/7/allure/">Allure report</a>
-
-###  Основной отчет
+###  Overview
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/Alrep.PNG">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_report_overview.PNG">
 </p>
 
 
-### Тесты 
+### Tests 
 <p align="center">
-<img title="Allure Tests" src="images/screens/Altests.PNG">
+<img title="Allure Tests" src="images/screenshots/allure_report_tests.PNG">
 </p>
 
-## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://allure.autotests.cloud/launch/15301">Allure TestOps</a>
+## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">Allure TestOps</a>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/AllureTestOps.PNG">
+<img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.PNG">
 </p>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/AllureTestOps2.PNG">
+<img title="Allure Test Suites" src="images/screenshots/TO_suites.PNG">
 </p>
 
-## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
+## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/JiraTicket.PNG">
 </p>
 
-## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
 > После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
 
 <p align="center">
