@@ -59,9 +59,7 @@
 - [x] Items number in the cart is displayed on the cart icon
 
 ## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> Jenkins </a>
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.PNG" alt="Jenkins"/></a>
-</p>
+![This is an image](images/screenshots/jenkins.PNG)
 
 ### Running tests remotely on Jenkins
 
