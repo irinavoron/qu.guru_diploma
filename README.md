@@ -1,13 +1,13 @@
-# UI tests automation project www.saucedemo.com
+# <p align="center"> UI tests automation project www.saucedemo.com in <code>Python</code> using <code>Pytest</code> </p>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/jw.PNG">
 </p>
 
-##  Содержание:
+##  Content
 
-> ➠ [Технологический стек](#classical_building-технологический-стек)
+> ➠ [Technology Stack](#classical_building-технологический-стек)
 >
-> ➠ [Покрытый функционал](#earth_africa-покрытый-функционал)
+> ➠ [Covered Functionality](#earth_africa-покрытый-функционал)
 >
 > ➠ [Сборка в Jenkins](#earth_africa-Jenkins-job)
 >
@@ -24,48 +24,44 @@
 > ➠ [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
   
-## 🧰 Технологии и инструменты
+## Technology Stack
 
 <p align="center">
 <a href="https://www.jetbrains.com/pycharm/"><img src="images/logo/pycharm.svg" width="50" height="50"  alt="PyCharm"/></a>
-<a href="https://www.java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
-<a href="https://github.com/"><img src="images/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a>
-<a href="https://junit.org/junit5/"><img src="images/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
-<a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>
-<a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://qameta.io/"><img src="images/logo/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>  
-<a href="https://www.atlassian.com/ru/software/jira/"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
+<a href="https://www.python.com/"><img src="images/logo/python.svg" width="50" height="50"  alt="Python"/></a>
+<a href="https://github.com/"><img src="images/logo/github.svg" width="50" height="50"  alt="GitHub"/></a>
+<a href="https://docs.pytest.org/"><img src="images/logo/pytest.svg" width="50" height="50"  alt="Pytest 5"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images/logo/selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images/logo/allure.svg" width="50" height="50"  alt="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="images/logo/jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://qameta.io/"><img src="images/logo/allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>  
+<a href="https://www.atlassian.com/ru/software/jira/"><img src="images/logo/jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </p>
-В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
 
-#### Реализованы паттерны PageObject и Lambda Steps
 >
-> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>.
+> <code>Selenoid</code> runs browsers in <code>Docker</code> containers.
 >
-> <code>Allure Report/Allure TestOps</code> формируют отчеты о запуске тестов.
+> <code>Allure Report/Allure TestOps</code> generates reports on the test run results.
 >
-> Для автоматизированной сборки проекта используется <code>Gradle</code>.
->
-> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
->
-> <code>Jenkins</code> выполняет запуск тестов.
-> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+> <code>Jenkins</code> is used to execute tests remotely.
+> 
+> After run is completed, notifications are sent using the bot in <code>Telegram</code>.
 
-## Покрытый функционал
+## Covered Functionality
+### UI tests were designed to check the following scenarios
 
-> Разработаны автотесты на <code>UI</code>.
-### UI
+- [x] Successful login testing
+- [x] Unsuccessful login testing
+- [x] Product can be added to cart
+- [x] Product can be removed from cart
+- [x] User can proceed to checkout from the cart
+- [x] User can proceed shopping from the cart
+- [x] User can open the product description from the inventory page
+- [x] Items number in the cart is displayed on the cart icon
 
-- [x] Тестирование входа на сайт до 18 лет
-- [x] Тестирование входа на сайт после 18 лет
-- [x] Тестирование поиска коктейлей
-- [x] Тестирование поиска истории виски
-## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/Johnnie_Walker_UI_tests/"> job </a>
+## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> project link </a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/Johnnie_Walker_UI_tests/"><img src="images/screens/jenkins.PNG" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.PNG" alt="Jenkins"/></a>
 </p>
 
 ### Удаленный запуск тестов на Jenkins
