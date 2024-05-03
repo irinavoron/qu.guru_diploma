@@ -91,7 +91,7 @@ pytest .
 <img title="Allure Tests" src="images/screenshots/allure_report_tests.PNG">
 </p>
 
-## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">Allure TestOps</a>
+## <img src="images/logo/allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">TestOps</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.PNG">
 </p>
@@ -99,7 +99,7 @@ pytest .
 <img title="Allure Test Suites" src="images/screenshots/TO_suites.PNG">
 </p>
 
-## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
+## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/JiraTicket.PNG">
 </p>
