@@ -1,4 +1,4 @@
-# Демо проект по автоматизации www.saucedemo.com
+# UI tests automation project www.saucedemo.com
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/jw.PNG">
 </p>
