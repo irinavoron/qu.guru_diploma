@@ -59,10 +59,6 @@
 - [x] Items number in the cart is displayed on the cart icon
 
 ## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> Jenkins </a>
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.png" alt="Jenkins"/></a>
-</p>
-
 #### Running tests remotely on Jenkins
 
 ```
@@ -72,6 +68,9 @@ pip install poetry
 poetry install
 pytest "${TEST}"
 ```
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.png" alt="Jenkins"/></a>
+</p>
 
 ## <img src="images/logo/allure.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/46/allure/">Allure Report</a>
 
