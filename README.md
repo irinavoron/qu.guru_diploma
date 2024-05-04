@@ -49,7 +49,7 @@
 > After run is completed, notifications are sent using the bot in <code>Telegram</code>.
 
 ## Covered Functionality
-### UI tests were designed to check the following scenarios
+#### UI tests were designed to check the following scenarios
 
 - [x] Successful login testing
 - [x] Unsuccessful login testing
@@ -65,7 +65,7 @@
 <a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.png" alt="Jenkins"/></a>
 </p>
 
-### Running tests remotely on Jenkins
+#### Running tests remotely on Jenkins
 
 ```
 python -m venv .venv
@@ -82,36 +82,36 @@ pytest .
 
 ## <img src="images/logo/allure.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/46/allure/">Allure Report</a>
 
-###  Overview
+####  Overview
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_report_overview.png">
 </p>
 
 
-### Tests 
+#### Tests 
 <p align="center">
 <img title="Allure Tests" src="images/screenshots/allure_report_tests.png">
 </p>
 
 ## <img src="images/logo/allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">TestOps</a>
-###  Dashboard
+####  Dashboard
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.png">
 </p>
 
-###  Test Cases
+####  Test Cases
 <p align="center">
 <img title="Allure Test Suites" src="images/screenshots/TO_suites.png">
 </p>
 
 ## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1206">Jira</a>
-### Test cases / lunches in TestOps are integrated with tasks in Jira
+#### Test cases / lunches in TestOps are integrated with tasks in Jira
 <p align="center">
 <img title="Jira" src="images/screenshots/jira.png">
 </p>
 
 ## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
-### After the test run is completed, a special bot created in <code>Telegram</code> automatically sends a notification with a report on the run.
+#### After the test run is completed, a special bot created in <code>Telegram</code> automatically sends a notification with a report on the run.
 
 <p align="center">
 <img title="Telegram Notification" src="images/screenshots/telegram.png" >
