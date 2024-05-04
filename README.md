@@ -1,7 +1,7 @@
-# <p align="center"> UI tests automation project www.saucedemo.com </p>
+# <p align="center"> UI tests automation project Swag Labs </p>
 ### <p align="center"> in <code>Python</code> using <code>Pytest</code> </p>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/jw.PNG">
+<img title="Swag Labs Main Page" src="images/screenshots/swag_labs.png">
 </p>
 
 ##  Content
@@ -59,7 +59,7 @@
 - [x] Items number in the cart is displayed on the cart icon
 
 ## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> Jenkins </a>
-![This is an image](images/screenshots/jenkins.PNG)
+<img title="Jenkins" src="images/screenshots/jenkins.png">
 
 ### Running tests remotely on Jenkins
 
@@ -86,27 +86,27 @@ pytest .
 
 ### Tests 
 <p align="center">
-<img title="Allure Tests" src="images/screenshots/allure_report_tests.PNG">
+<img title="Allure Tests" src="images/screenshots/allure_report_tests.png">
 </p>
 
 ## <img src="images/logo/allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">TestOps</a>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.PNG">
+<img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.png">
 </p>
 <p align="center">
-<img title="Allure Test Suites" src="images/screenshots/TO_suites.PNG">
+<img title="Allure Test Suites" src="images/screenshots/TO_suites.png">
 </p>
 
 ## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/JiraTicket.PNG">
+<img title="Allure Overview Dashboard" src="images/screens/JiraTicket.png">
 </p>
 
 ## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
 > После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/bot.PNG" >
+<img title="Allure Overview Dashboard" src="images/screens/bot.png" >
 </p>
 
 ## Примеры запуска тестов в Selenoid
