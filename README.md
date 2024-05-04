@@ -97,21 +97,21 @@ pytest .
 <img title="Allure Test Suites" src="images/screenshots/TO_suites.png">
 </p>
 
-## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1303">Jira</a>
+## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1206">Jira</a>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/JiraTicket.png">
+<img title="Jira" src="images/screenshots/JiraTicket.png">
 </p>
 
 ## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
-> После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
+> After the build is completed, a special bot created in <code>Telegram</code> automatically sends a notification with a report on the run.
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/bot.png" >
+<img title="Telegram Notification" src="images/screenshots/telegram.png" >
 </p>
 
-## Примеры запуска тестов в Selenoid
-### <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео <a target="_blank" href="https://selenoid.autotests.cloud/video/ef6f0961cd61bebe69b39d6591b8a072.mp4">прохождения тестов </a>
+## Example of tests running in Selenoid
+### <img src="images/logo/selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Test Run <a target="_blank" href="https://selenoid.autotests.cloud/video/ef6f0961cd61bebe69b39d6591b8a072.mp4">Video </a>
 <p align="center">
-<img title="Local launch example" src="images/gif/video.gif">
+<img title="Tests Run in Selenoid" src="images/gif/video.gif">
 </p>
 
