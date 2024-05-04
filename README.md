@@ -69,14 +69,14 @@ poetry install
 pytest "${TEST}"
 ```
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"><img src="images/screenshots/jenkins.png" alt="Jenkins"/></a>
+<img title="Jenkins" src="images/screenshots/jenkins.png">
 </p>
 
 ## <img src="images/logo/allure.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/46/allure/">Allure Report</a>
 
 ####  Overview
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/allure_report_overview.png">
+<img title="Allure Dashboard" src="images/screenshots/allure_report_overview.png">
 </p>
 
 
