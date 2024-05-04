@@ -10,13 +10,15 @@
 >
 > ➠ [Covered Functionality](#covered-functionality)
 >
-> ➠ [Build in Jenkins](#img-srcimageslogojenkinssvg-width25-height25--altjenkinsa-a-target_blank-hrefhttpsjenkinsautotestscloudjobc11-voronirina-diploma-ui-jenkins-a)
+> ➠ [Build in Jenkins](#running-tests-remotely-on-jenkins)
 >
 > ➠ [Running tests locally](#running-tests-locally)
 >
-> ➠ [Allure Report](#img-srcimageslogoalluresvg-width25-height25--altallurea-a-target_blank-hrefhttpsjenkinsautotestscloudjobc11-voronirina-diploma-ui41allureallure-reporta)
+> ➠ [Allure Report](#overview)
 > 
-> ➠ [Integration with Jira](#img-srcimageslogojirasvg-width25-height25--altallurea-integration-with-a-target_blank-hrefhttpsjiraautotestscloudbrowsehomework-1206jiraa)
+> ➠ [Report in TestOps](#dashboard)
+> 
+> ➠ [Integration with Jira](#)
 >
 > ➠ [Notifications in Telegram](#img-srcimageslogotelegramsvg-width25-height25--altallurea-notifications-in-telegram)
 >
@@ -92,9 +94,12 @@ pytest .
 </p>
 
 ## <img src="images/logo/allure_TO.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://allure.autotests.cloud/launch/38541/">TestOps</a>
+###  Dashboard
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/TO_dashboards.png">
 </p>
+
+###  Test Cases
 <p align="center">
 <img title="Allure Test Suites" src="images/screenshots/TO_suites.png">
 </p>
