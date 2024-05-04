@@ -6,19 +6,19 @@
 
 ##  Content
 
-> ➠ [Technology Stack](##Technology-Stack)
+> ➠ [Technology Stack](#technology-stack)
 >
-> ➠ [Covered Functionality](#earth_africa-покрытый-функционал)
+> ➠ [Covered Functionality](#covered-functionality)
 >
-> ➠ [Build in Jenkins](#earth_africa-Jenkins-job)
+> ➠ [Build in Jenkins](#img-srcimageslogojenkinssvg-width25-height25--altjenkinsa-a-target_blank-jenkins-a)
 >
-> ➠ [Running tests locally](#earth_africa-Запуск-тестов-из-терминала)
+> ➠ [Running tests locally](#running-tests-locally)
 >
-> ➠ [Allure Report](#earth_africa-Allure-отчет)
+> ➠ [Allure Report](#img-srcimageslogoalluresvg-width25-height25--altallurea-a-target_blank-hrefhttpsjenkinsautotestscloudjobc11-voronirina-diploma-ui41allureallure-reporta)
 > 
-> ➠ [Integration with Jira](#earth_africa-Allure-отчет)
+> ➠ [Integration with Jira](#img-srcimageslogojirasvg-width25-height25--altallurea-integration-with-a-target_blank-hrefhttpsjiraautotestscloudbrowsehomework-1206jiraa)
 >
-> ➠ [Report in Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
+> ➠ [Notifications in Telegram](#img-srcimageslogotelegramsvg-width25-height25--altallurea-notifications-in-telegram)
 >
 > ➠ [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
@@ -58,7 +58,7 @@
 - [x] User can open the product description from the inventory page
 - [x] Items number in the cart is displayed on the cart icon
 
-## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/"> Jenkins </a>
+## <img src="images/logo/jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> <a target="_blank"> Jenkins </a>
 <img title="Jenkins" src="images/screenshots/jenkins.png">
 
 ### Running tests remotely on Jenkins
@@ -99,7 +99,7 @@ pytest .
 
 ## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1206">Jira</a>
 <p align="center">
-<img title="Jira" src="images/screenshots/JiraTicket.png">
+<img title="Jira" src="images/screenshots/jira.png">
 </p>
 
 ## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
