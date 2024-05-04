@@ -18,9 +18,9 @@
 > 
 > ➠ [Report in TestOps](#dashboard)
 > 
-> ➠ [Integration with Jira](#)
+> ➠ [Integration with Jira](#test-cases--lunches-in-testops-are-integrated-with-tasks-in-jira)
 >
-> ➠ [Notifications in Telegram](#img-srcimageslogotelegramsvg-width25-height25--altallurea-notifications-in-telegram)
+> ➠ [Notifications in Telegram](#after-the-test-run-is-completed-a-special-bot-created-in-codetelegramcode-automatically-sends-a-notification-with-a-report-on-the-run)
 >
 > ➠ [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
@@ -105,12 +105,13 @@ pytest .
 </p>
 
 ## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1206">Jira</a>
+### Test cases / lunches in TestOps are integrated with tasks in Jira
 <p align="center">
 <img title="Jira" src="images/screenshots/jira.png">
 </p>
 
 ## <img src="images/logo/telegram.svg" width="25" height="25"  alt="Allure"/></a> Notifications in Telegram
-> After the build is completed, a special bot created in <code>Telegram</code> automatically sends a notification with a report on the run.
+### After the test run is completed, a special bot created in <code>Telegram</code> automatically sends a notification with a report on the run.
 
 <p align="center">
 <img title="Telegram Notification" src="images/screenshots/telegram.png" >
