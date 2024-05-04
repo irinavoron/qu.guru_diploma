@@ -18,7 +18,7 @@ def test_product_can_be_removed_from_cart():
     inventory_page.add_product_to_cart(products.backpack)
     inventory_page.open_cart()
 
-    cart.remove_product(products.bike_light)
+    cart.remove_product(products.backpack)
 
     items_list = browser.all('.cart_item')
     with allure.step('Verify the cart is empty'):
@@ -80,6 +80,6 @@ def test_cart_persistence():
     with allure.step('Go back to cart from the product page'):
         browser.element('#shopping_cart_container').click()
 
-    common.product_details_match_selected_product(products.bike_light)
+    common.product_details_match_selected_product(products.backpack)
 
     cart.clear_cart(1)
