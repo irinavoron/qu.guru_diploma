@@ -12,13 +12,11 @@
 >
 > ➠ [Build in Jenkins](#running-tests-remotely-on-jenkins)
 >
-> ➠ [Running tests locally](#running-tests-locally)
->
 > ➠ [Allure Report](#overview)
 > 
 > ➠ [Report in TestOps](#dashboard)
 > 
-> ➠ [Integration with Jira](#test-cases--lunches-in-testops-are-integrated-with-tasks-in-jira)
+> ➠ [Integration with Jira](#test-caseslaunches-in-testops-are-integrated-with-tasks-in-jira)
 >
 > ➠ [Notifications in Telegram](#after-the-test-run-is-completed-a-special-bot-created-in-codetelegramcode-automatically-sends-a-notification-with-a-report-on-the-run)
 >
@@ -74,11 +72,6 @@ pip install poetry
 poetry install
 pytest "${TEST}"
 ```
-##  Running tests locally
-
-```
-pytest .
-```
 
 ## <img src="images/logo/allure.svg" width="25" height="25"  alt="Allure"/></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-voronirina-diploma-UI/46/allure/">Allure Report</a>
 
@@ -105,7 +98,7 @@ pytest .
 </p>
 
 ## <img src="images/logo/jira.svg" width="25" height="25"  alt="Allure"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1206">Jira</a>
-#### Test cases / lunches in TestOps are integrated with tasks in Jira
+#### Test cases/launches in TestOps are integrated with tasks in Jira
 <p align="center">
 <img title="Jira" src="images/screenshots/jira.png">
 </p>
