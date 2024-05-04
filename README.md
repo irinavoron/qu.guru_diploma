@@ -80,7 +80,7 @@ pytest .
 
 ###  Overview
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/allure_report_overview.PNG">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_report_overview.png">
 </p>
 
 
