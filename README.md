@@ -6,7 +6,7 @@
 
 ##  Content
 
-> ➠ [Technology Stack](#classical_building-технологический-стек)
+> ➠ [Technology Stack](##Technology-Stack)
 >
 > ➠ [Covered Functionality](#earth_africa-покрытый-функционал)
 >
