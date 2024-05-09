@@ -1,7 +1,7 @@
 import allure
 from selene import browser, have
 
-from saucedemo_diploma_project_test.data.products import Product
+from qa_guru_diploma_swagLabs_ui.data.products import Product
 
 
 def select_product(product: Product):

@@ -1,7 +1,7 @@
 import allure
 from selene import browser
 
-from saucedemo_diploma_project_test.data.products import Product
+from qa_guru_diploma_swagLabs_ui.data.products import Product
 
 
 class Cart:

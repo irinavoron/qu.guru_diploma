@@ -5,11 +5,11 @@ from allure_commons.types import Severity
 from selene import browser, have
 from dotenv import load_dotenv
 
-from saucedemo_diploma_project_test.data import products
-from saucedemo_diploma_project_test.pages import login_page
-from saucedemo_diploma_project_test.pages.common import select_product, product_details_match_selected_product
-from saucedemo_diploma_project_test.pages.inventory_page import InventoryPage
-from saucedemo_diploma_project_test.pages.cart_page import Cart
+from qa_guru_diploma_swagLabs_ui.data import products
+from qa_guru_diploma_swagLabs_ui.pages import login_page
+from qa_guru_diploma_swagLabs_ui.pages.common import select_product, product_details_match_selected_product
+from qa_guru_diploma_swagLabs_ui.pages.inventory_page import InventoryPage
+from qa_guru_diploma_swagLabs_ui.pages.cart_page import Cart
 
 inventory_page = InventoryPage()
 cart = Cart()

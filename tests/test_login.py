@@ -3,7 +3,7 @@ import pytest
 from allure_commons.types import Severity
 from selene import browser, be
 
-from saucedemo_diploma_project_test.pages import login_page
+from qa_guru_diploma_swagLabs_ui.pages import login_page
 from tests.test_inventory_page import user_password, user_name
 
 
