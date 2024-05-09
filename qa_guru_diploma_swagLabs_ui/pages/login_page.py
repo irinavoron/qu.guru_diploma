@@ -1,5 +1,4 @@
 import os
-import pytest
 import allure
 from selene import browser
 from dotenv import load_dotenv

@@ -1,11 +1,9 @@
-import os
-
 import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from dotenv import load_dotenv
 
+from config import config
 from qa_guru_diploma_swagLabs_ui.utils import attach
 
 
@@ -22,21 +20,15 @@ def browser_management():
         }
     }
 
-    load_dotenv()
-    url = os.getenv('SELENOID_URL')
-    login = os.getenv('SELENOID_LOGIN')
-    password = os.getenv('SELENOID_PASSWORD')
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=f'https://{login}:{password}@{url}/wd/hub',
+        command_executor=f'https://{config.SELENOID_LOGIN}:{config.SELENOID_PASSWORD}@{config.SELENOID_URL}/wd/hub',
         options=options)
     browser.config.driver = driver
 
-    load_dotenv()
-    base_url = os.getenv('BASE_URL')
-    browser.config.base_url = base_url
-    browser.config.window_width = 1896
-    browser.config.window_height = 1096
+    browser.config.base_url = config.BASE_URL
+    browser.config.window_width = config.WINDOW_WIDTH
+    browser.config.window_height = config.WINDOW_HEIGHT
 
     yield
 
@@ -46,4 +38,3 @@ def browser_management():
     attach.add_video()
 
     browser.quit()
-

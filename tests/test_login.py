@@ -3,15 +3,19 @@ import pytest
 from allure_commons.types import Severity
 from selene import browser, be
 
+from config import config
 from qa_guru_diploma_swagLabs_ui.pages import login_page
-from tests.test_inventory_page import user_password, user_name
+from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
+
+pytestmark = [
+    feature('Login'),
+    owner('irinaV')
+]
 
 
 @allure.title('Successful login')
 @allure.tag('web', 'smoke')
 @allure.story('The user can login with valid creds')
-@allure.feature('Login')
-@allure.label('owner', 'irinaV')
 @allure.severity(Severity.BLOCKER)
 def test_successful_login():
     login_page.successful_login()
@@ -23,15 +27,13 @@ def test_successful_login():
 @allure.title('Unsuccessful login')
 @allure.tag('web')
 @allure.story('The user can`t login with invalid creds')
-@allure.feature('Login')
-@allure.label('owner', 'irinaV')
 @allure.severity(Severity.CRITICAL)
 @pytest.mark.parametrize(
     'login, password', [
-        ('wrong_name', {user_password}),
-        ({user_name}, 'wrong_password'),
+        ('wrong_name', {config.USER_PASSWORD}),
+        ({config.USER_NAME}, 'wrong_password'),
         ('', ''),
-        ('locked_out_user', {user_password})
+        ('locked_out_user', {config.USER_PASSWORD})
     ],
     ids=['invalid name', 'invalid password', 'empty form', 'locked out user']
 )

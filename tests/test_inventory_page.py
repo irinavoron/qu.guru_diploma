@@ -1,29 +1,26 @@
-import os
-
 import allure
 from allure_commons.types import Severity
 from selene import browser, have
-from dotenv import load_dotenv
 
 from qa_guru_diploma_swagLabs_ui.data import products
 from qa_guru_diploma_swagLabs_ui.pages import login_page
 from qa_guru_diploma_swagLabs_ui.pages.common import select_product, product_details_match_selected_product
 from qa_guru_diploma_swagLabs_ui.pages.inventory_page import InventoryPage
 from qa_guru_diploma_swagLabs_ui.pages.cart_page import Cart
+from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
+
+pytestmark = [
+    feature('Inventory Page'),
+    owner('irinaV')
+]
 
 inventory_page = InventoryPage()
 cart = Cart()
-
-load_dotenv()
-user_name = os.getenv('USER_NAME')
-user_password = os.getenv('USER_PASSWORD')
 
 
 @allure.title('Cart badge displays items number')
 @allure.tag('web')
 @allure.story('The user can see the number of the added products on the cart icon')
-@allure.feature('Inventory page')
-@allure.label('owner', 'irinaV')
 @allure.severity(Severity.MINOR)
 def test_cart_badge_displays_items_number():
     login_page.successful_login()
@@ -43,8 +40,6 @@ def test_cart_badge_displays_items_number():
 @allure.title('Product can be added to cart')
 @allure.tag('web', 'smoke')
 @allure.story('The user can see the added product in the cart')
-@allure.feature('Inventory page')
-@allure.label('owner', 'irinaV')
 @allure.severity(Severity.BLOCKER)
 def test_product_is_added_to_cart():
     login_page.successful_login()
@@ -59,8 +54,6 @@ def test_product_is_added_to_cart():
 @allure.title('The product page is opened after clicking the product')
 @allure.tag('web')
 @allure.story('The user can open product page from the inventory page')
-@allure.feature('Inventory page')
-@allure.label('owner', 'irinaV')
 @allure.severity(Severity.NORMAL)
 def test_product_page_can_be_opened_from_inventory_page():
     login_page.successful_login()
