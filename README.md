@@ -19,8 +19,6 @@
 > ➠ [Integration with Jira](#test-caseslaunches-in-testops-are-integrated-with-tasks-in-jira)
 >
 > ➠ [Notifications in Telegram](#after-the-test-run-is-completed-a-special-bot-created-in-codetelegramcode-automatically-sends-a-notification-with-a-report-on-the-run)
->
-> ➠ [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
   
 ## Technology Stack
@@ -107,11 +105,5 @@ pytest "${TEST}"
 
 <p align="center">
 <img title="Telegram Notification" src="images/screenshots/telegram.png" >
-</p>
-
-## Example of tests running in Selenoid
-### <img src="images/logo/selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Test Run <a target="_blank" href="https://selenoid.autotests.cloud/video/ef6f0961cd61bebe69b39d6591b8a072.mp4">Video </a>
-<p align="center">
-<img title="Tests Run in Selenoid" src="images/gif/video.gif">
 </p>
 
