@@ -4,7 +4,7 @@ from selene import browser, have
 
 from qa_guru_diploma_swagLabs_ui.data import products
 from qa_guru_diploma_swagLabs_ui.pages import login_page
-from qa_guru_diploma_swagLabs_ui.pages.common import select_product, product_details_match_selected_product
+from qa_guru_diploma_swagLabs_ui.pages.common import Common
 from qa_guru_diploma_swagLabs_ui.pages.inventory_page import InventoryPage
 from qa_guru_diploma_swagLabs_ui.pages.cart_page import Cart
 from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
@@ -16,6 +16,7 @@ pytestmark = [
 
 inventory_page = InventoryPage()
 cart = Cart()
+common = Common()
 
 
 @allure.title('Cart badge displays items number')
@@ -46,7 +47,7 @@ def test_product_is_added_to_cart():
     inventory_page.add_product_to_cart(products.backpack)
     inventory_page.open_cart()
 
-    product_details_match_selected_product(products.backpack)
+    common.product_details_match_selected_product(products.backpack)
 
     cart.clear_cart(1)
 
@@ -58,8 +59,8 @@ def test_product_is_added_to_cart():
 def test_product_page_can_be_opened_from_inventory_page():
     login_page.successful_login()
 
-    select_product(products.bike_light)
+    common.select_product(products.bike_light)
 
-    product_details_match_selected_product(products.bike_light)
+    common.product_details_match_selected_product(products.bike_light)
 
 

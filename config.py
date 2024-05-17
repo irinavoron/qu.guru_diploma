@@ -7,7 +7,7 @@ class Config(pydantic_settings.BaseSettings):
     SELENOID_LOGIN: str
     SELENOID_PASSWORD: str
 
-    BASE_URL: str = 'https://www.saucedemo.com'
+    BASE_URL: str
     USER_NAME: str
     USER_PASSWORD: str
 

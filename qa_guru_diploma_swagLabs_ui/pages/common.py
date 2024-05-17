@@ -4,14 +4,15 @@ from selene import browser, have
 from qa_guru_diploma_swagLabs_ui.data.products import Product
 
 
-def select_product(product: Product):
-    with allure.step('Select product'):
-        browser.element(product.id).click()
+class Common:
+    def select_product(self, product: Product):
+        with allure.step('Select product'):
+            browser.element(product.id).click()
 
 
-def product_details_match_selected_product(product: Product):
-    with allure.step('Verify product details match selected product'):
-        browser.element('[data-test=inventory-item-name]'
-                        ).should(have.text(product.name))
-        browser.element('[data-test=inventory-item-price]'
-                        ).should(have.text(product.price))
+    def product_details_match_selected_product(self, product: Product):
+        with allure.step('Verify product details match selected product'):
+            browser.element('[data-test=inventory-item-name]'
+                            ).should(have.text(product.name))
+            browser.element('[data-test=inventory-item-price]'
+                            ).should(have.text(product.price))

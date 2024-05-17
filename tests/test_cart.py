@@ -3,14 +3,22 @@ from allure_commons.types import Severity
 from selene import browser, have, be
 
 from qa_guru_diploma_swagLabs_ui.data import products
-from qa_guru_diploma_swagLabs_ui.pages import login_page, common
+from qa_guru_diploma_swagLabs_ui.pages import login_page
+from qa_guru_diploma_swagLabs_ui.pages.cart_page import Cart
+from qa_guru_diploma_swagLabs_ui.pages.common import Common
+from qa_guru_diploma_swagLabs_ui.pages.inventory_page import InventoryPage
+from qa_guru_diploma_swagLabs_ui.pages.product_page import ProductPage
 from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
-from tests.test_inventory_page import inventory_page, cart
 
 pytestmark = [
     feature('Cart'),
     owner('irinaV')
 ]
+
+inventory_page = InventoryPage()
+cart = Cart()
+common = Common()
+product_page = ProductPage()
 
 
 @allure.title('The added product can be removed from the cart')
@@ -37,9 +45,7 @@ def test_user_can_proceed_to_checkout_from_cart():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
     inventory_page.open_cart()
-
-    with allure.step('Click "checkout" button'):
-        browser.element('#checkout').click()
+    cart.go_to_checkout()
 
     with allure.step('Verify that checkout page is opened'):
         browser.element('[data-test=title]').should(have.text('Checkout: Your Information'))
@@ -55,9 +61,7 @@ def test_user_can_continue_shopping_from_cart():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
     inventory_page.open_cart()
-
-    with allure.step('Click "checkout" button'):
-        browser.element('#continue-shopping').click()
+    cart.continue_shopping()
 
     with allure.step('Verify that catalogue page is opened'):
         browser.element('.inventory_list').should(be.visible)
@@ -73,10 +77,8 @@ def test_cart_persistence():
     login_page.successful_login()
     inventory_page.add_product_to_cart(products.backpack)
     inventory_page.open_cart()
-
     common.select_product(products.backpack)
-    with allure.step('Go back to cart from the product page'):
-        browser.element('#shopping_cart_container').click()
+    product_page.go_to_cart()
 
     common.product_details_match_selected_product(products.backpack)
 

@@ -14,3 +14,11 @@ class Cart:
             browser.open('/cart.html')
             for product in range(products_qty):
                 browser.element('[name^=remove]').click()
+
+    def go_to_checkout(self):
+        with allure.step('Click "checkout" button'):
+            browser.element('#checkout').click()
+
+    def continue_shopping(self):
+        with allure.step('Click "continue-shopping" button'):
+            browser.element('#continue-shopping').click()

@@ -38,7 +38,6 @@ def successful_login():
     login_page.submit_login_form()
 
 
-
 def unsuccessful_login(login, password):
     login_page.open_login_page()
 
