@@ -107,3 +107,10 @@ pytest "${TEST}"
 <img title="Telegram Notification" src="images/screenshots/telegram.png" >
 </p>
 
+## <img src="images/logo/selenoid.svg" width="25" height="25"  alt="Allure"/></a> An example video of running tests in Selenoid
+#### Video is attached to each test in the Allure Report. Here is a sample video for the cart tests.
+
+<p align="center">
+<img title="Cart tests video" src="images/cart_tests.gif" >
+</p>
+
