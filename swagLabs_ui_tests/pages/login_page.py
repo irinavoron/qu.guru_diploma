@@ -1,6 +1,6 @@
 import os
 import allure
-from selene import browser
+from selene import browser, be
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -26,21 +26,6 @@ class LoginPage:
         with allure.step('Submit the login form'):
             browser.element('#login-button').click()
 
-
-login_page = LoginPage()
-
-
-def successful_login():
-    login_page.open_login_page()
-
-    login_page.fill_user_name(user_name)
-    login_page.fill_password(user_password)
-    login_page.submit_login_form()
-
-
-def unsuccessful_login(login, password):
-    login_page.open_login_page()
-
-    login_page.fill_user_name(login)
-    login_page.fill_password(password)
-    login_page.submit_login_form()
+    def verify_error_message_is_displayed(self):
+        with allure.step('Verify that error message is displayed'):
+            browser.element('.error-button').should(be.visible)

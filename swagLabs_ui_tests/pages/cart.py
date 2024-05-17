@@ -1,5 +1,5 @@
 import allure
-from selene import browser
+from selene import browser, have
 
 from swagLabs_ui_tests.data.products import Product
 
@@ -22,3 +22,9 @@ class Cart:
     def continue_shopping(self):
         with allure.step('Click "continue-shopping" button'):
             browser.element('#continue-shopping').click()
+
+
+    def verify_is_empty(self):
+        items_list = browser.all('.cart_item')
+        with allure.step('Verify the cart is empty'):
+            items_list.should(have.size(0))
