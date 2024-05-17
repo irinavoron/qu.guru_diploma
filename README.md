@@ -19,6 +19,8 @@
 > ➠ [Integration with Jira](#test-caseslaunches-in-testops-are-integrated-with-tasks-in-jira)
 >
 > ➠ [Notifications in Telegram](#after-the-test-run-is-completed-a-special-bot-created-in-codetelegramcode-automatically-sends-a-notification-with-a-report-on-the-run)
+> 
+> ➠ [Example video of running tests in Selenoid](#video-is-attached-to-each-test-in-the-allure-report-here-is-a-sample-video-for-the-cart-tests)
 
   
 ## Technology Stack
@@ -107,7 +109,7 @@ pytest "${TEST}"
 <img title="Telegram Notification" src="images/screenshots/telegram.png" >
 </p>
 
-## <img src="images/logo/selenoid.svg" width="25" height="25"  alt="Allure"/></a> An example video of running tests in Selenoid
+## <img src="images/logo/selenoid.svg" width="25" height="25"  alt="Allure"/></a> Example video of running tests in Selenoid
 #### Video is attached to each test in the Allure Report. Here is a sample video for the cart tests.
 
 <p align="center">
