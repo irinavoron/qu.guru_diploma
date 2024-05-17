@@ -1,4 +1,4 @@
-from qa_guru_diploma_swagLabs_ui.data.products import Product
+from swagLabs_ui_tests.data.products import Product
 import allure
 from selene import browser
 

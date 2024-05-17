@@ -2,13 +2,13 @@ import allure
 from allure_commons.types import Severity
 from selene import browser, have, be
 
-from qa_guru_diploma_swagLabs_ui.data import products
-from qa_guru_diploma_swagLabs_ui.pages import login_page
-from qa_guru_diploma_swagLabs_ui.pages.cart_page import Cart
-from qa_guru_diploma_swagLabs_ui.pages.common import Common
-from qa_guru_diploma_swagLabs_ui.pages.inventory_page import InventoryPage
-from qa_guru_diploma_swagLabs_ui.pages.product_page import ProductPage
-from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
+from swagLabs_ui_tests.data import products
+from swagLabs_ui_tests.pages import login_page
+from swagLabs_ui_tests.pages.cart_page import Cart
+from swagLabs_ui_tests.pages.common import Common
+from swagLabs_ui_tests.pages.inventory_page import InventoryPage
+from swagLabs_ui_tests.pages.product_page import ProductPage
+from swagLabs_ui_tests.utils.allure_marks import feature, owner
 
 pytestmark = [
     feature('Cart'),

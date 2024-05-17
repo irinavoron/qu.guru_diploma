@@ -4,8 +4,8 @@ from allure_commons.types import Severity
 from selene import browser, be
 
 from config import config
-from qa_guru_diploma_swagLabs_ui.pages import login_page
-from qa_guru_diploma_swagLabs_ui.utils.allure_marks import feature, owner
+from swagLabs_ui_tests.pages import login_page
+from swagLabs_ui_tests.utils.allure_marks import feature, owner
 
 pytestmark = [
     feature('Login'),

@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from config import config
-from qa_guru_diploma_swagLabs_ui.utils import attach
+from swagLabs_ui_tests.utils import attach
 
 
 @pytest.fixture(autouse=True, scope='function')
